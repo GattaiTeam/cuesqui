@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kueski</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation-float.min.css">
-	<script src="kueskifields.js"></script>
+	<link rel="stylesheet" href="css/foundation-float.min.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<section>
@@ -13,131 +13,144 @@
 				<img src="https://i1.wp.com/webadictos.com/media/2015/03/Prestamos-de-dinero-Kueski.png?resize=800%2C400" alt="Kueski" style="display: block;margin: 0 auto; max-height: 180px;">
 			</div>
 			<div class="small-12">
-				<!-- HOME -->
-				<input id="slider-loan-amount" min="1000" value="1000" max="2000" default_amount="1850" step="10" type="range">
-				<input id="slider-loan-period" min="1" value="1" max="30" type="range">
-				<!-- REGISTER -->
-				<input id="signupEmail" name="email" type="email">
-				<hr>
-				<div id="first-step">
-					<label>name
-						<input name="name" type="text">
-					</label>
-					<label>lastname_a
-						<input name="lastname_a" type="text">
-					</label>
-					<label>lastname_b
-						<input name="lastname_b" type="text">
-					</label>
-					<label>b_day
-						<input name="b_day" type="number">
-					</label>
-					<label>b_month
-						<input name="b_month" type="number">
-					</label>
-					<label>b_year
-						<input name="b_year" type="number">
-					</label>
-					<label>Masculino
-						<input name="gender" value="Masculino" type="radio">
-					</label>
-					<label>Femenino
-						<input name="gender" value="Femenino" type="radio">
-					</label>
-					<label>bornplace
-						<input name="bornplace" type="text">
-					</label>
-					<label>curp
-						<input name="curp" type="text">
-					</label>
-					<label>mobile
-						<input name="mobile" type="tel">
-					</label>
-					<label>accept_check_phone
-						<input name="accept_check_phone" type="checkbox">
-					</label>
-					<label>home_phone
-						<input name="home_phone" type="tel">
-					</label>
-				</div>
-				<hr>
-				<div id="second-step">
-					<label>street
-						<input name="street" type="text">
-					</label>
-					<label>ext_number
-						<input name="ext_number" type="text">
-					</label>
-					<label>inner_number
-						<input name="inner_number" type="text">
-					</label>
-					<label>postal_code
-						<input name="postal_code" type="text">
-					</label>
-					<label>state
-						<input name="state" type="text">
-					</label>
-					<label>city
-						<input name="city" type="text">
-					</label>
-					<label>neighborhood
-						<input name="neighborhood" type="text">"
-					</label>
-				</div>
-				<hr>
-				<div id="third-step">
-					<label>salary
-						<input name="salary" type="text">
-					</label>
-					<label>is_salary_bank_deposit: Yes
-						<input name="is_salary_bank_deposit" value="yes" type="radio">
-					</label>
-					<label>is_salary_bank_deposit: No
-						<input name="is_salary_bank_deposit" value="no" type="radio">
-					</label>
-					<label>family_salary
-						<input name="family_salary" type="text">
-					</label>
-					<label>has_credit_card: Yes
-						<input name="has_credit_card" value="yes" type="radio">
-					</label>
-					<label>has_credit_card: No
-						<input name="has_credit_card" value="no" type="radio">
-					</label>
-					<label>credit_card_digits
-						<input name="credit_card_digits" type="text">
-					</label>
-					<label>has_house_loan: yes
-						<input name="has_house_loan" value="yes" type="radio">
-					</label>
-					<label>has_house_loan: no
-						<input name="has_house_loan" value="no" type="radio">
-					</label>
-					<label>has_auto_loan: yes
-						<input name="has_auto_loan" value="yes" type="radio">
-					</label>
-					<label>has_auto_loan: no
-						<input name="has_auto_loan" value="no" type="radio">
-					</label>
-					<label>credit_history_selfperception
-						<input name="credit_history_selfperception" type="text">
-					</label>
-					<label>circulo_authorize
-						<input name="circulo_authorize" type="checkbox">
-					</label>
-					<label>loan_typedesc
-						<input name="loan_typedesc" type="hidden">
-					</label>
-					<label>loan_typedesc_subcategory
-						<input name="loan_typedesc_subcategory" type="text">
-					</label>
-					<label>applying_by_self
-						<input name="applying_by_self" type="checkbox">
-					</label>
-				</div>
+				<form id="form" class="wizard" action="#">
+					<h3>pre-step</h3>
+					<section id="pre-step">
+						<!-- HOME -->
+						<label>slider-loan-amount
+							<input id="slider-loan-amount" min="1000" value="1000" max="2000" default_amount="1850" step="10" type="range">
+						</label>
+						<label>slider-loan-period
+							<input id="slider-loan-period" min="1" value="1" max="30" type="range">
+						</label>
+						<!-- REGISTER -->
+						<label>signupEmail
+							<input id="signupEmail" name="email" type="email">
+						</label>						
+					</section>
+					<h3>first-step</h3>
+					<section id="first-step">
+						<label>name
+							<input name="name" type="text">
+						</label>
+						<label>lastname_a
+							<input name="lastname_a" type="text">
+						</label>
+						<label>lastname_b
+							<input name="lastname_b" type="text">
+						</label>
+						<label>b_day
+							<input name="b_day" type="number">
+						</label>
+						<label>b_month
+							<input name="b_month" type="number">
+						</label>
+						<label>b_year
+							<input name="b_year" type="number">
+						</label>
+						<label>Masculino
+							<input name="gender" value="Masculino" type="radio">
+						</label>
+						<label>Femenino
+							<input name="gender" value="Femenino" type="radio">
+						</label>
+						<label>bornplace
+							<input name="bornplace" type="text">
+						</label>
+						<label>curp
+							<input name="curp" type="text">
+						</label>
+						<label>mobile
+							<input name="mobile" type="tel">
+						</label>
+						<label>accept_check_phone
+							<input name="accept_check_phone" type="checkbox">
+						</label>
+						<label>home_phone
+							<input name="home_phone" type="tel">
+						</label>
+					</section>
+					<h3>second-step</h3>
+					<section id="second-step">
+						<label>street
+							<input name="street" type="text">
+						</label>
+						<label>ext_number
+							<input name="ext_number" type="text">
+						</label>
+						<label>inner_number
+							<input name="inner_number" type="text">
+						</label>
+						<label>postal_code
+							<input name="postal_code" type="text">
+						</label>
+						<label>state
+							<input name="state" type="text">
+						</label>
+						<label>city
+							<input name="city" type="text">
+						</label>
+						<label>neighborhood
+							<input name="neighborhood" type="text">
+						</label>
+					</section>
+					<h3>third-step</h3>
+					<section id="third-step">
+						<label>salary
+							<input name="salary" type="text">
+						</label>
+						<label>is_salary_bank_deposit: Yes
+							<input name="is_salary_bank_deposit" value="yes" type="radio">
+						</label>
+						<label>is_salary_bank_deposit: No
+							<input name="is_salary_bank_deposit" value="no" type="radio">
+						</label>
+						<label>family_salary
+							<input name="family_salary" type="text">
+						</label>
+						<label>has_credit_card: Yes
+							<input name="has_credit_card" value="yes" type="radio">
+						</label>
+						<label>has_credit_card: No
+							<input name="has_credit_card" value="no" type="radio">
+						</label>
+						<label>credit_card_digits
+							<input name="credit_card_digits" type="text">
+						</label>
+						<label>has_house_loan: yes
+							<input name="has_house_loan" value="yes" type="radio">
+						</label>
+						<label>has_house_loan: no
+							<input name="has_house_loan" value="no" type="radio">
+						</label>
+						<label>has_auto_loan: yes
+							<input name="has_auto_loan" value="yes" type="radio">
+						</label>
+						<label>has_auto_loan: no
+							<input name="has_auto_loan" value="no" type="radio">
+						</label>
+						<label>credit_history_selfperception
+							<input name="credit_history_selfperception" type="text">
+						</label>
+						<label>circulo_authorize
+							<input name="circulo_authorize" type="checkbox">
+						</label>
+						<label>loan_typedesc
+							<input name="loan_typedesc" type="hidden">
+						</label>
+						<label>loan_typedesc_subcategory
+							<input name="loan_typedesc_subcategory" type="text">
+						</label>
+						<label>applying_by_self
+							<input name="applying_by_self" type="checkbox">
+						</label>
+					</section>					
+				</form>
 			</div>
 		</div>
 	</section>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.steps.min.js"></script>
+<script src="script.js"></script>
 </html>
